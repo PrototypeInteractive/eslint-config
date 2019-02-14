@@ -964,18 +964,6 @@ Array [
     "severity": 1,
   },
   Object {
-    "column": 35,
-    "line": 178,
-    "rule": "react/jsx-no-bind",
-    "severity": 1,
-  },
-  Object {
-    "column": 35,
-    "line": 182,
-    "rule": "react/jsx-no-bind",
-    "severity": 1,
-  },
-  Object {
     "column": 22,
     "line": 207,
     "rule": "react/jsx-no-comment-textnodes",

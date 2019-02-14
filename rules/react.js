@@ -47,8 +47,8 @@ module.exports = {
         'react/jsx-key': 1,
         // Limit maximum of props on a single line in JSX
         'react/jsx-max-props-per-line': 0,
-        // No .bind() or Arrow Functions in JSX Props
-        'react/jsx-no-bind': 1,
+        // Allow .bind() or Arrow Functions in JSX Props. Only when rendering lists can this be a problem.
+        'react/jsx-no-bind': 0,
         // Prevent comments from being inserted as text nodes
         'react/jsx-no-comment-textnodes': 2,
         // Prevent duplicate props in JSX
