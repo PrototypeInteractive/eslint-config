@@ -3,7 +3,7 @@
 'use strict';
 
 function pow(x) {
-    return x ** 2;
+  return x ** 2;
 }
 
 pow();

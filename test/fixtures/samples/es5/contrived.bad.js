@@ -4,5 +4,5 @@
 
 // Test forbidden `event`
 window.addEventListener('resize', function () {
-    console.log(event);
+  console.log(event);
 });

@@ -3,17 +3,17 @@
 'use strict';
 
 class Person {
-    constructor(name) {
-        this._name = name;
-    }
+  constructor(name) {
+    this._name = name;
+  }
 
-    getName() {
-        return this._name;
-    }
+  getName() {
+    return this._name;
+  }
 
-    sayHello() {
-        console.log(`Hello ${this._name}`);
-    }
+  sayHello() {
+    console.log(`Hello ${this._name}`);
+  }
 }
 
 const person = new Person('André');
@@ -23,12 +23,12 @@ person.getName();
 // -------------------------------------------------
 
 function sumOne(x = 1) {
-    x -= 1;
-    x += 1;
-    x *= 1;
-    x /= 1;
+  x -= 1;
+  x += 1;
+  x *= 1;
+  x /= 1;
 
-    return x + 1;
+  return x + 1;
 }
 
 sumOne(1);
@@ -36,27 +36,27 @@ sumOne(1);
 // -------------------------------------------------
 
 function printArray(arr) {
-    for (let x = 0; x <= arr.length; x += 1) {
-        console.log(x);
-    }
+  for (let x = 0; x <= arr.length; x += 1) {
+    console.log(x);
+  }
 
-    let y;
+  let y;
 
-    while (y < arr.length) {
-        console.log(y);
-        y += 1;
-    }
+  while (y < arr.length) {
+    console.log(y);
+    y += 1;
+  }
 
-    y = 0;
-    do {
-        console.log(y);
-        y += 1;
-    } while (y < arr.length);
+  y = 0;
+  do {
+    console.log(y);
+    y += 1;
+  } while (y < arr.length);
 
-    y = 0;
-    do {
-        console.log(y);
-    } while ((y += 1) < arr.length);
+  y = 0;
+  do {
+    console.log(y);
+  } while ((y += 1) < arr.length);
 }
 
 printArray([]);
@@ -64,17 +64,17 @@ printArray([]);
 // -------------------------------------------------
 
 function returnSwitch(x) {
-    switch (x) {
+  switch (x) {
     case 0.1:
-        return x;
+      return x;
     case 0.2: {
-        const y = x + 1;
+      const y = x + 1;
 
-        return y;
+      return y;
     }
     default:
-        return x;
-    }
+      return x;
+  }
 }
 
 returnSwitch(0.3);
@@ -82,9 +82,9 @@ returnSwitch(0.3);
 // -------------------------------------------------
 
 function chaining(arr) {
-    return arr
-    .filter(() => true)
-    .map((x) => x + 1);
+  return arr
+  .filter(() => true)
+  .map((x) => x + 1);
 }
 
 chaining([]);
@@ -92,9 +92,9 @@ chaining([]);
 // -------------------------------------------------
 
 function fnWithRestParams(...arr) {
-    return arr
-    .filter(() => true)
-    .map((x) => x + 1);
+  return arr
+  .filter(() => true)
+  .map((x) => x + 1);
 }
 
 fnWithRestParams(1, 2);
@@ -102,7 +102,7 @@ fnWithRestParams(1, 2);
 // -------------------------------------------------
 
 function fnWithDefaultArgs(x = 1) {
-    return x + 1;
+  return x + 1;
 }
 
 fnWithDefaultArgs();
@@ -110,9 +110,9 @@ fnWithDefaultArgs();
 // -------------------------------------------------
 
 function fnThatUsesSpread() {
-    const [first, ...other] = [1, 2, 3];
+  const [first, ...other] = [1, 2, 3];
 
-    console.log(first, other);
+  console.log(first, other);
 }
 
 fnThatUsesSpread();
@@ -120,10 +120,10 @@ fnThatUsesSpread();
 // -------------------------------------------------
 
 function fnThatUsesEnhancedObjectProperties(x) {
-    return {
-        [`prop-${x}`]: true,
-        x,
-    };
+  return {
+    [`prop-${x}`]: true,
+    x,
+  };
 }
 
 fnThatUsesEnhancedObjectProperties();

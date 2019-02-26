@@ -6,21 +6,21 @@ import React, { Component } from 'react';
 // ---------------------------------------------------------------------
 // Should not give an error
 (function () {
-    class MyComponent extends Component {
-        render() {
-            return <div>foo</div>;
-        }
+  class MyComponent extends Component {
+    render() {
+      return <div>foo</div>;
     }
+  }
 
-    console.log(MyComponent);
+  console.log(MyComponent);
 })();
 
 // `jsx-uses-vars` - prevent variables used in JSX to be incorrectly marked as unused
 // ---------------------------------------------------------------------
 // Should not give an error
 (function () {
-    const isLoading = true;
-    const component = <Component isLoading={ isLoading } />;
+  const isLoading = true;
+  const component = <Component isLoading={ isLoading } />;
 
-    console.log(isLoading, component);
+  console.log(isLoading, component);
 })();

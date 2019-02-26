@@ -3,7 +3,7 @@
 'use strict';
 
 async function fetchData(params) {
-    await Promise.resolve({ some: 'data', ...params });
+  await Promise.resolve({ some: 'data', ...params });
 }
 
 fetchData();

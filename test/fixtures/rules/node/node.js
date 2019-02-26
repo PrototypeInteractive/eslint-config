@@ -6,43 +6,43 @@ const fs = require('fs');
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    function f(err, callback) {
-        if (err) {
-            callback(err);
-        }
+  function f(err, callback) {
+    if (err) {
+      callback(err);
     }
+  }
 })();
 
 // `global-require` - require require() calls to be placed at top-level module scope
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    const someDep = require('some-dep');
+  const someDep = require('some-dep');
 })();
 
 // `handle-callback-err` - require error handling in callbacks
 // ---------------------------------------------------------------------
 // Disencouraged
 (function () {
-    function f(err, callback) {
-        callback();
-    }
+  function f(err, callback) {
+    callback();
+  }
 })();
 // Good
 (function () {
-    function f(err, callback) {
-        if (err) {
-            return callback(err);
-        }
-
-        callback();
+  function f(err, callback) {
+    if (err) {
+      return callback(err);
     }
+
+    callback();
+  }
 })();
 // Also good
 (function () {
-    function f(err, callback) {
-        callback(err);
-    }
+  function f(err, callback) {
+    callback(err);
+  }
 })();
 
 // `no-mixed-requires` - disallow require calls to be mixed with regular variable declarations
@@ -57,16 +57,16 @@ const fs = require('fs');
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    const path = `${__dirname}/file`;
+  const path = `${__dirname}/file`;
 })();
 
 // `no-process-env` - disallow the use of process.env
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    if (process.env.NODE_ENV === 'development') {
-        console.log('foo');
-    }
+  if (process.env.NODE_ENV === 'development') {
+    console.log('foo');
+  }
 })();
 
 // `no-process-exit` - disallow the use of process.exit()
@@ -82,5 +82,5 @@ process.exit(0);
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    fs.existsSync('some/file');
+  fs.existsSync('some/file');
 })();
