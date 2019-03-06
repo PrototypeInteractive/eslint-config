@@ -4,12 +4,12 @@
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    function f() {
-        let x;
+  function f() {
+    let x;
 
-        x = 1;
-        x = 2;
-    }
+    x = 1;
+    x = 2;
+  }
 })();
 
 // `no-catch-shadow` - disallow catch clause parameters from shadowing variables in the outer scope
@@ -20,9 +20,9 @@
 // ---------------------------------------------------------------------
 // Bad
 (function () {
-    const x = 0;
+  const x = 0;
 
-    delete x;
+  delete x;
 })();
 
 // `no-label-var` - disallow labels that share a name with a variable
@@ -34,55 +34,55 @@
 // The only restricted global is `event` in the browser because it's easy to make mistakes.. see below
 // Bad
 (function () {
-    function handleClick() {
-        console.log(event);
-    }
+  function handleClick() {
+    console.log(event);
+  }
 })();
 // Good
 (function () {
-    function handleClick(event) {
-        console.log(event);
-    }
+  function handleClick(event) {
+    console.log(event);
+  }
 })();
 // Also good
 (function () {
-    function handleClick(e) {
-        console.log(e);
-    }
+  function handleClick(e) {
+    console.log(e);
+  }
 })();
 
 // `no-shadow` - disallow variable declarations from shadowing variables declared in the outer scope
 // ---------------------------------------------------------------------
 // Not active
 (function () {
-    const a = 1;
+  const a = 1;
 
-    function f() {
-        const a = 2;
-    }
+  function f() {
+    const a = 2;
+  }
 })();
 
 // `no-shadow-restricted-names` - disallow identifiers from shadowing restricted names
 // ---------------------------------------------------------------------
 // Bad
 (function () {
-    function undefined() {}
+  function undefined() {}
 })();
 
 // `no-undef` - disallow the use of undeclared variables unless mentioned in /*global */ comments
 // ---------------------------------------------------------------------
 // Bad
 (function () {
-    const x = y + 1;
+  const x = y + 1;
 })();
 
 // `no-undef-init` - disallow initializing variables to undefined
 // ---------------------------------------------------------------------
 // Bad
 (function () {
-    let x = undefined;
+  let x = undefined;
 
-    x = 1;
+  x = 1;
 })();
 
 // `no-undefined` - disallow the use of undefined as an identifier
@@ -98,34 +98,34 @@ console.log(Math === undefined);
 // ---------------------------------------------------------------------
 // Bad (variables)
 (function () {
-    console.log(a);
+  console.log(a);
 
-    const a = 10;
+  const a = 10;
 })();
 // Good (variables)
 (function () {
-    const a = 10;
+  const a = 10;
 
-    console.log(a);
+  console.log(a);
 })();
 // Bad (classes)
 (function () {
-    const f = new Person();
+  const f = new Person();
 
-    class Person {}
+  class Person {}
 })();
 // Good (classes)
 (function () {
-    class Person {}
+  class Person {}
 
-    const f = new Person();
+  const f = new Person();
 })();
 // Functions are simply allowed
 (function () {
-    a();
+  a();
 
-    function b() {}
-    function a() {
-        b();
-    }
+  function b() {}
+  function a() {
+    b();
+  }
 })();

@@ -2,7 +2,7 @@
 // ---------------------------------------------------------------------
 // Bad
 (function foo() {
-    'use strict';
+  'use strict';
 })();
 // Good
 // Use `'use strict;` at the top of the file

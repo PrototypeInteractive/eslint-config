@@ -4,16 +4,16 @@
 // ---------------------------------------------------------------------
 // Bad
 (function () {
-    const x = 1;
-    const y = 2;
+  const x = 1;
+  const y = 2;
 
-    console.log(x);
+  console.log(x);
 })();
 // Good
 (function () {
-    const x = 1;
-    const { y, ...other } = { y: 1, z: 2 };
+  const x = 1;
+  const { y, ...other } = { y: 1, z: 2 };
 
-    console.log(x);
-    console.log(other);
+  console.log(x);
+  console.log(other);
 })();
